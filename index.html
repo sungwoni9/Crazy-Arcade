@@ -1,0 +1,40 @@
+<!-- 주석 : 실행되지 않는 문장-->>
+<!-- HTML : Hyper Text Markup Language -->>
+<!-- 문서의 뼈대를 작성하는 용도, SEO (검색엔진 최적화)인덱싱 용도 -->>
+<!-- html 문서는 xml 형식의 태그로 구성되어있다.
+시작 태그와 종료태그가 항상 짝궁으로 이루어져 있음을 의미.
+<태그명></태그명>
+-->>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       h1 {
+       color:red;
+       }
+    </style>
+
+    <title>Web resource의 이해</title>
+</head>
+<body>
+    <h1>Web resource의 이해</h1>
+    <h2>헤딩 텍스트2</h2>
+    <h3>헤딩 텍스트3</h3>
+    <h4>헤딩 텍스트4</h4>
+    <h5>헤딩 텍스트5</h5>
+    <h6>헤딩 텍스트6</h6>
+
+    <button id = "btn">초인종 벨</button>
+
+    <script>
+        // Javascript 주석, script 태그 안에 Javascript 문법을 작성할 수 있음
+    const button = document.getElementById("btn");
+    button.addEventListener("click", e=> {
+        alert("띵동~");
+    })
+    </script>
+</body>
+</html>
