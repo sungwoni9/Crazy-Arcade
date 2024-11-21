@@ -1,0 +1,33 @@
+/* 
+CSS 에서는 HTML 문서의 요소(Elements)들을 선택하기 위하여 
+CSS 선택자를 사용한다.
+ */
+ 
+ /* 
+ Type Selector 태그 선택자 : 태그명을 사용하여 선택하는 것
+ */
+
+h1{
+    color: red;
+}
+
+/* 
+ID Selector 아이디 선택자 : 아이디값을 사용하여 선택하는 것
+#아이디명
+(id는 고유한 식별자로 활용)
+*/
+
+#contents {
+    color: blue;
+}
+
+
+/* 
+Class Selecotr 클래스 선택자 : 클래스명으로 요소를 선택하는 것
+.클래스명
+(Class는 다중 식별자로 활용)
+*/
+
+.paragraph{
+    color: blueviolet;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="ex03-tabmenu.css">
+   
+    <title>탭 매뉴 만들기</title>
+</head>
+<body>
+    <div id="tab-menu">
+        <input type="radio" id="menu1" name="menu" value="html" checked>
+        <input type="radio" id="menu2" name="menu" value="css">
+        <input type="radio" id="menu3" name="menu" value="javascript">
+        <ul>
+            <li id="list1"><label for="menu1"><div><span>HTML</span></div></label></li>
+            <li id="list2"><label for="menu2"><div><span>CSS</span></div></label></li>
+            <li id="list3"><label for="menu3"><div><span>Java Script</span></div></label></li>
+        </ul>
+
+        <p id="html">
+            HTML은?
+            HTML(하이퍼텍스트 마크업 언어, HyperText Markup Language)은 웹 페이지를 작성하고 구조화하기 위한 표준 마크업 언어입니다.
+            HTML은 웹 페이지의 콘텐츠를 정의하고 구조화하는 데 사용되며, 주로 텍스트, 이미지, 링크, 테이블, 동영상 등
+            다양한 요소를 웹 브라우저가 올바르게 표시할 수 있도록 돕습니다. HTML은 기본적으로 태그(tag)라는 특별한 문법을 사용하여 작성됩니다.
+        </p>
+
+        <p id="css">
+            CSS는?
+            CSS(Cascading Style Sheets)는 웹 페이지의 스타일과 레이아웃을 정의하는 언어로, HTML로 작성된 구조에 시각적 디자인을 입히는 역할을 합니다. 색상, 글꼴, 크기,
+            간격,
+            레이아웃, 애니메이션 등 웹 페이지의 모든 시각적 요소를 제어할 수 있습니다.
+
+            주요 특징
+            스타일 정의:
+
+            HTML 요소에 색상, 폰트, 테두리, 배경 등 스타일을 추가.
+
+            구조와 스타일의 분리:
+
+            HTML은 웹 콘텐츠의 구조(문서의 뼈대)를 담당하고, CSS는 스타일(화면 디자인)을 담당하여 코드 유지보수가 쉬워짐.
+            계단식(Cascading):
+
+            여러 스타일 규칙이 적용될 때 우선순위와 중첩 규칙에 따라 최종적으로 어떤 스타일이 적용될지 결정.
+
+        </p>
+
+        <p id="js">
+            JavaScript는?
+            웹 페이지에 동적 기능을 추가하는 프로그래밍 언어입니다. HTML이 구조(콘텐츠)를 담당하고, CSS가 스타일(디자인)을 담당한다면, JavaScript는 동작과 상호작용을
+            담당합니다. 브라우저에서 실행되는 클라이언트 측 언어로 시작했지만, 현재는 서버 개발(Node.js) 등 다양한 환경에서도 활용됩니다.
+
+            주요 특징
+            동적 상호작용 구현:
+
+            버튼 클릭, 폼 제출, 슬라이드쇼, 드래그 앤 드롭 등의 사용자 이벤트 처리 가능.
+            웹 페이지 조작:
+
+            DOM(Document Object Model)을 통해 HTML 요소를 읽고, 수정하거나 삭제 가능.
+            예: 버튼을 클릭하면 텍스트 내용이 바뀌는 기능.
+            호환성과 확장성:
+
+            모든 주요 웹 브라우저에서 실행 가능하며, 다양한 라이브러리와 프레임워크(jQuery, React, Vue 등)로 기능 확장 가능.
+
+        </p>
+    </div>
+</body>
+</html>
