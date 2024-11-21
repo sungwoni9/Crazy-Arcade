@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #username, #password {
+            padding: 10px;
+        }
+
+        
+    </style>
+
+    <title>정보를 전달하는 폼(양식) 작성하기</title>
+</head>
+<body>
+    <form method = "post" action="http://localhost:8080">
+        <input type ="text" id="username" name="username" placeholder="username">
+        <input type ="password" id="password" name="userpasword" placeholder="password">
+        <!-- form 영역 안에 있는 button 은 sumit 역할을 수행한다 -->
+        <button onclick="alert('hi')">하이</button>
+
+        <!-- form 영역 안에서 나만의 버튼을 만들고 싶다면, button 이 아니라 input 사용해야함 -->
+        <input type="button" value="버튼3" onclick="alert('hello~')">
+        
+        <input type="submit">
+    </form>
+    
+</body>
+</html>

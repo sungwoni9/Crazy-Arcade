@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <h1><a href="https://www.naver.com/" >네이버</a></h1>
+</head>
+
+<body>
+
+    <form action="http://localhost:8080">
+
+        <span><input type="checkbox" id="validate-username" name="validate-username" checked> 실명 인증된 아이디로 가입</span><br>
+        <span><input type="text" id ="username" name="username" placeholder="아이디" required></span><br>
+        <span>@naver.com</span><br>
+
+        <input type="password" name="password" placeholder="비밀번호" required><br>
+        <input type="button" value="비밀번호 보기"><br>
+        
+
+        <span>[선택] <input type="email" name="optionalEmail" placeholder="[선택]이메일주소 (비밀번호)"></span><br>
+        <p>비밀번호: 필수 정보입니다.</p>
+
+        <input type="text" id="name" name="name" placeholder="이름" required><br>
+        <input type="number" id="birthdate"name="birthdate" placeholder="생년월일 8자리" min="19300101" max="20241121"><br>
+
+        <span><select name="telecom">
+                <option value="" disabled selected>통신사 선택</option>
+                <option value="skt">SKT</option>
+                <option value="skt_alt">SKT 알뜰폰</option>
+                <option value="kt">KT</option>
+                <option value="kt_alt">KT 알뜰폰</option>
+                <option value="lg">LG U+</option>
+                <option value="lg_alt">LG U+ 알뜰폰</option>
+            </select></span>
+
+        <ul>
+            <li><input type="radio"  id="male" name="gender" value="male"><span>남자</span><br></li>
+            <li><input type="radio" id="female" name="gender" value="female"><span>여자</span><br></li>
+            <li><input type="radio" id="local" name="national" value="local" checked><span>내국인</span><br></li>
+            <li><input type="radio" id="Foreigner" name="national" value="Foreigner"><span>외국인</span><br></li>
+        </ul>
+
+        <input type="text" id="phonenumber" name="national" placeholder="휴대전화 번호" pattern="01[0~9]{1}-[0~9]{4}-[0~9]{4}" title="###-####-####" required><br>
+        <p>생년월일: 필수 정보입니다.</p><br>
+        <span>휴대전화번호: 필수 정보입니다.</span><br>
+        <span><input type="checkbox" name="checkbox" required> <em>[필수]인증 약관 전체동의 </em></span><br>
+        <input type="button" value="약관 목록">
+        <select name="agree-list">
+            <option value="" disabled selected>약관 목록</option>
+            <option value="">개인정보 이용</option>
+            <option value="">고유식별정보 처리</option>
+            <option value="">통신사 이용약관</option>
+            <option value="">통신사 이용약관</option>
+            <option value="">네이버 개인정보 수집</option>
+        </select> 
+
+        <span>필수 약관에 모두 동의해 주세요.</span>
+
+        <input type="submit" value="인증요청">
+
+    </form>
+</body>
+
+</html>
