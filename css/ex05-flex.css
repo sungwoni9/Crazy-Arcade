@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#flex-container {
+    /*flex의 정렬 방향은 기본값이 가로 방향*/
+    display: flex;
+    flex-direction: column;
+    /* flex diplay 상태에서 자식 요소를 정방향으로 배치하는 스타일을 결정 */
+    justify-content: start;
+    /* 정방향 기준으로 Cross 방향의 정렬 스타일을 결정 */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    width: 80vw;
+    height: 50vh;
+    margin: 100px auto;
+    background-color: lightgray;
+}
+
+.item{
+    border: solid 1px black;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
