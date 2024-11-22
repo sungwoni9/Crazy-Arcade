@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>경향신문 클론</title>
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li>스포츠경향</li>
+            <li>주간경향</li>
+            <li>레이디경향</li>
+            <li>ENGLISH</li>
+        </ul>
+    </nav>
+
+    <nav>
+        <ul>
+            <li>로그인 | 회원가입</li>
+            <li>기사제보</li>
+            <li>지면보기</li>
+            <li>구독신청</li>
+        </ul>
+    </nav>
+
+    <h1>경향신문</h1>
+
+    <button
+        img="data:image/png;base64,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">햄버거
+        메뉴</button>
+    <button>Search</button>
+
+    <div class="inner">
+        <nav>
+            <ul>
+                <li>오피니언</li>
+                <li>정치</li>
+                <li>경제</li>
+                <li>사회</li>
+                <li>국제</li>
+                <li>문화</li>
+                <li>메거진L</li>
+                <li>스포츠</li>
+                <li>영상</li>
+                <li>사진+</li>
+                <li>뉴스레터</li>
+                <li>경향티비</li>
+            </ul>
+        </nav>
+        <span>2024년 11월 21일 (목)</span><br>
+    </div>
+</header>
+
+<section>
+    <article>
+        <h2>경향티비</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bj62kIM4uqI?si=kO1nvRj9_A1VPuig"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+
+    <article>
+        <h2>"나는 살고 싶었다"</h2>
+        <p>기사요약2</p>
+    </article>
+    <article>
+        <h2>한국에서 이런 게임이?</h2>
+        <p>기사요약3</p>
+    </article>
+    <article>
+        <h2>개장수에게 끌려갈 위기...</h2>
+        <p>기사요약4</p>
+    </article>
+</section>
+
+<section>
+    <main>
+        <article>
+            <img src="https://img.khan.co.kr/ranking/khan/mobile/MHTopA/1_1732150351_1yn5alnZZI0SQA4Y.webp"
+                alt="경향티비 이미지">
+            <h2>속보</h2>
+        </article>
+    </main>
+</section>
+
+<section>
+    <article>
+        <h2>기사 제목7</h2>
+        <img src="https://img.khan.co.kr/ranking/khan/mobile/MHTopA/2_1732264006_sAamHQlCH2JTNEM2.webp" alt="경향티비 이미지">
+    </article>
+    <article>
+        <h2>기사 제목8</h2>
+        <img src="https://img.khan.co.kr/ranking/khan/mobile/MHTopA/3_1732254683_sR0sXwmdImezYLQa.webp" alt="경향티비 이미지">
+    </article>
+    <article>
+        <h2>기사 제목9</h2>
+        <img src="https://img.khan.co.kr/ranking/khan/mobile/MHTopA/4_1732264007_NPsNr3c0unsORy9S.webp" alt="경향티비 이미지">
+    </article>
+    <aside>신문 무료 구독</aside>
+</section>
+
+<section>
+    <h3>먼저 보는 칸업 콘텐츠</h3>
+    <article>
+        <h2>기사 제목7</h2>
+        <img src="https://img.khan.co.kr/ranking/c/140x90/khan/mobile/MHKhanUp/811_1732252190_p7uMRYV9D1yCXwQh.webp"
+            alt="경향티비 이미지">
+    </article>
+    <article>
+        <h2>기사 제목8</h2>
+        <img src="https://img.khan.co.kr/ranking/c/140x90/khan/mobile/MHKhanUp/811_1732225618_CjhmxSSG3p1Bs5Em.webp"
+            alt="경향티비 이미지">
+    </article>
+</section>
+
+<footer>
+    <p>
+    <address>서울시 중구 정동길3 경향신문사</address>
+    <span>고객센터:0202-3701-1114</span>
+    <span>등록번호:0202-3701-1114</span>
+    <span>고객센터:서울</span>
+    <span>등록일자:2012.03022:0202-3701-1114</span>
+    </p>
+    <p>
+        Copyright &copy; 경향신문. All rights reserved.
+    </p>
+</footer>
+</div>
+
+</body>
+
+</html>
