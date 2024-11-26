@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="modal.css">
+
+    <title>Modal form 만들기</title>
+</head>
+
+<body>
+    <div id="modal">
+        <form action="">
+            <div id="background-box"></div>
+            <div id="profile">
+                <img id="profile-img"
+                    src="https://item.kakaocdn.net/do/1d495862f49c38232ca8b6cc6a9679a0f604e7b0e6900f9ac53a43965300eb9a">
+                <h4>Amelle Laurent</h4>
+                <p><a>amelle@gmail.com</a></p>
+            </div>
+            <div id="form-content">
+                <div id="first" class="btn-group">
+                    <div id="btn-link" class="icon-button">
+                        <div class="icon-img"></div>
+                        <input type="button" value="Copy link">
+                    </div>
+                    <input type="button" value="View profile">
+                </div>
+                <div id="input-container">
+                    <div id="input-area-name" class="input-area">
+                        <span class="input-title">Name</span>
+                        <div class="input-group">
+                            <input type="text" id="firstname" placeholder="first name">
+                            <input type="text" id="lastname" placeholder="last name">
+                        </div>
+                    </div>
+                    <div id="input-area-email" class="input-area">
+                        <span class="input-title">Email address</span>
+                        <div class="input-group">
+                            <div id="emil-icon" class="icon-img"></div>
+                            <input type="email" id="email" placeholder="email">
+                        </div>
+                    </div>
+                    <div id="input-area-username" class="input-area">
+                        <span class="input-title">Username</span>
+                        <div class="input-group">
+                            <input type="text" id="url" value="untitledui.com/" disabled>
+                            <input type="text" id="username" placeholder="username">
+                        </div>
+                    </div>
+                    <div id="input-area-file" class="input-area">
+                        <span class="input-title">Profile photo</span>
+                        <div class="input-group">
+                            <img id="preview-img"
+                                src="https://item.kakaocdn.net/do/1d495862f49c38232ca8b6cc6a9679a0f604e7b0e6900f9ac53a43965300eb9a">
+                            <input type="button" id="btn-profile" value="Click to replace">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom-group">
+                <div id="btn-delete" class="icon-button">
+                    <div class="icon-img"></div>
+                    <input type="button" value="Delete user">
+                </div>
+                <div class="btn-group">
+                    <input type="button" value="Cancel">
+                    <input type="submit" value="Save changes">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="root"></div>
+</body>
+
+</html>

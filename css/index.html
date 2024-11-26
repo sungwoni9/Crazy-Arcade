@@ -10,129 +10,400 @@
     <title>경향신문 클론</title>
 </head>
 
-<header>
-    <nav>
-        <ul>
-            <li>스포츠경향</li>
-            <li>주간경향</li>
-            <li>레이디경향</li>
-            <li>ENGLISH</li>
-        </ul>
-    </nav>
+<body>
+    <a href=""><button id="btn-gotop"></button></button></a>
+    <div id="root">
+        <header>
+            <div id="nav-top">
+                <nav>
+                    <ul>
+                        <li>스포츠경향</li>
+                        <li>주간경향</li>
+                        <li>레이디경향</li>
+                        <li>ENGLISH</li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                        <li>기사제보</li>
+                        <li>지면보기</li>
+                        <li>구독신청</li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>경향신문</h1>
+            <div id="nav-bottom">
+                <div id="btn-group">
+                    <button id="btn-hamburger"></button>
+                    <button id="btn-search"></button>
+                </div>
+                <div id="nav-main">
+                    <nav>
+                        <ul>
+                            <li>오피니언</li>
+                            <li>정치</li>
+                            <li>경제</li>
+                            <li>사회</li>
+                            <li>국제</li>
+                            <li>문화</li>
+                            <li>매거진L</li>
+                            <li>스포츠</li>
+                            <li>영상</li>
+                            <li>사진+</li>
+                            <li>뉴스레터</li>
+                            <li>경향티비</li>
+                        </ul>
+                    </nav>
+                    <span id="today">2024년 11월 25일 (월)</span>
+                </div>
+            </div>
+        </header>
+        <section id="section-main">
+            <article id="arti-tv">
+                <h3>경향티비</h3>
+                <iframe src="https://www.youtube.com/embed/YfmFyodOG3w?si=jFS7CMAjclRlMrdn" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h4>기사제목</h4>
+                <p>기사요약</p>
+            </article>
+            <div id="mini-list">
+                <ul>
+                    <li>
+                        <p>기사요약</p>
+                        <h3>기사제목이 있는 기사에 대한 글의 일부분이 이 곳에 출력됩니다. 기사제목이 있는 기사에 대한 글의 일부분이 이 곳에 출력됩니다. 기사제목이 있는 기사에 대한 글의
+                            일부분이 이 곳에 출력됩니다. </h3>
+                    </li>
+                    <li>
+                        <p>기사요약</p>
+                        <h3>기사제목</h3>
+                    </li>
+                    <li>
+                        <p>기사요약</p>
+                        <h3>기사제목</h3>
+                    </li>
+                </ul>
+            </div>
+            <main>
+                <article id="article-main">
+                    <img src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj"
+                        alt="기사제목">
+                    <h2>메인 기사의 기사 제목이 두 줄로 이 곳에 출력이 됩니다. 메인 기사의 기사 제목이 두 줄로 이 곳에 출력이 됩니다.메인 기사의 기사 제목이 두 줄로 이 곳에 출력이
+                        됩니다.</h2>
+                </article>
+            </main>
+            <article class="arti-main-sub">
+                <img src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj"
+                    alt="기사제목">
+                <h3>기사제목을 가진 기사의 내용의 일부가 이 곳에 출력됩니다. 기사제목을 가진 기사의 내용의 일부가 이 곳에 출력됩니다. 기사제목을 가진 기사의 내용의 일부가 이 곳에 출력됩니다.
+                </h3>
+            </article>
+            <article class="arti-main-sub">
+                <img src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj"
+                    alt="기사제목">
+                <h3>기사제목</h3>
+            </article>
+            <article class="arti-main-sub">
+                <img src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj"
+                    alt="기사제목">
+                <h3>기사제목</h3>
+            </article>
+            <aside>
+                <img
+                    src="https://img.khan.co.kr/ranking/khan/mobile/MHTopAreaBanner/831_1731981159_jZkeO3hp53jcy9oD.webp">
+            </aside>
+        </section>
+        <section id="khanup-contents">
+            <h3>먼저보는 칸업 콘텐츠</h3>
+            <div>
+                <article>
+                    <img src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj"
+                        alt="기사제목">
+                    <div>
+                        <p>카테고리명</p>
+                        <h3>콘텐츠 제목</h3>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj"
+                        alt="기사제목">
+                    <div>
+                        <p>카테고리명</p>
+                        <h3>콘텐츠 제목</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div id="section-mid">
+            <section>
+                <article>
+                    <h3>한줄 짜리 기사제목</h3>
+                    <img
+                        src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                    <p>기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용
+                        기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용 기사 내용
+                    </p>
+                </article>
+                <article>
+                    <h3>한줄 짜리 기사제목</h3>
+                    <img
+                        src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                    <p>기사 내용</p>
+                </article>
+                <article>
+                    <h3>한줄 짜리 기사제목</h3>
+                    <img
+                        src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                    <p>기사 내용</p>
+                </article>
+                <article>
+                    <h3>한줄 짜리 기사제목</h3>
+                    <img
+                        src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                    <p>기사 내용</p>
+                </article>
+            </section>
+            <div>
+                <div id="tag-list">
+                    <a href="#">
+                        <div>#이재명 사법리스크</div>
+                    </a>
+                    <a href="#">
+                        <div>#이재명 사법리스크</div>
+                    </a>
+                    <a href="#">
+                        <div>#이재명 사법리스크</div>
+                    </a>
+                </div>
+                <div id="mini-list-mid">
+                    <section>
+                        <aside>
+                            <img
+                                src="https://img.khan.co.kr/ranking/khan/pc/MABanner/1131_1728954406_LX9aoliFQLoIw7sD.webp">
+                        </aside>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                        <article>
+                            <img
+                                src="https://yt3.googleusercontent.com/HAW0DwztaccF_6W1XxhAtiYp2kXDTidmTzqoHnmgN-tGzEX9JHxAdBb1XtxHhSuRC5R4sNA2=s900-c-k-c0x00ffffff-no-rj">
+                            <h4>기사 제목</h4>
+                        </article>
+                    </section>
+                    <section id="section-opinion">
+                        <h2>오피니언</h2>
+                        <div id="arti-images">
+                            <article>
+                                <img
+                                    src="https://img.khan.co.kr/ranking/c/140x140/khan/mobile/MHCartoon/106_1732440046_LXje9SqpXWy21bxD.webp">
+                                <h4>기사 제목</h4>
+                            </article>
+                            <article>
+                                <img
+                                    src="https://img.khan.co.kr/ranking/c/140x140/khan/mobile/MHCartoon/105_1732440769_UKbbZn6a2mJnNqAU.webp">
+                                <h4>기사 제목</h4>
+                            </article>
+                        </div>
+                        <div id="arti-opinion">
+                            <h4>사설</h4>
+                            <ul>
+                                <li>사설의 제목1</li>
+                                <li>사설의 제목2</li>
+                                <li>사설의 제목3</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul id="mini-list-opinion">
+                                <li>
+                                    <p>카테고리명</p>
+                                    <h4>사설의 제목</h4>
+                                </li>
+                                <li>
+                                    <p>카테고리명</p>
+                                    <h4>사설의 제목</h4>
+                                </li>
+                                <li>
+                                    <p>카테고리명</p>
+                                    <h4>사설의 제목</h4>
+                                </li>
+                                <li>
+                                    <p>카테고리명</p>
+                                    <h4>사설의 제목</h4>
+                                </li>
+                                <li>
+                                    <p>카테고리명</p>
+                                    <h4>사설의 제목</h4>
+                                </li>
+                                <li>
+                                    <p>카테고리명</p>
+                                    <h4>사설의 제목</h4>
+                                </li>
+                                <li>
+                                    <p>카테고리명</p>
+                                    <h4>사설의 제목</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <aside></aside>
+        <footer>
+            <h2><a href="">경향신문</a></h2>
+            <hr>
+            <div id="sitemap-list">
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
 
-    <nav>
-        <ul>
-            <li>로그인 | 회원가입</li>
-            <li>기사제보</li>
-            <li>지면보기</li>
-            <li>구독신청</li>
-        </ul>
-    </nav>
-
-    <h1>경향신문</h1>
-
-    <button
-        img="data:image/png;base64,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">햄버거
-        메뉴</button>
-    <button>Search</button>
-
-    <div class="inner">
-        <nav>
-            <ul>
-                <li>오피니언</li>
-                <li>정치</li>
-                <li>경제</li>
-                <li>사회</li>
-                <li>국제</li>
-                <li>문화</li>
-                <li>메거진L</li>
-                <li>스포츠</li>
-                <li>영상</li>
-                <li>사진+</li>
-                <li>뉴스레터</li>
-                <li>경향티비</li>
-            </ul>
-        </nav>
-        <span>2024년 11월 21일 (목)</span><br>
+            </div>
+            <hr>
+            <p class="adress">
+            <address>서울시 중구 정동길3 경향신문사</address>
+            <span>고객센터:0202-3701-1114</span>
+            <span>등록번호:0202-3701-1114</span>
+            <span>고객센터:서울</span>
+            <span>등록일자:2012.03022:0202-3701-1114</span>
+            </p>
+            <p>
+                <strong>Copyright &copy; 경향신문. All rights reserved.</strong>
+            </p>
+        </footer>
     </div>
-</header>
-
-<section>
-    <article>
-        <h2>경향티비</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bj62kIM4uqI?si=kO1nvRj9_A1VPuig"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </article>
-
-    <article>
-        <h2>"나는 살고 싶었다"</h2>
-        <p>기사요약2</p>
-    </article>
-    <article>
-        <h2>한국에서 이런 게임이?</h2>
-        <p>기사요약3</p>
-    </article>
-    <article>
-        <h2>개장수에게 끌려갈 위기...</h2>
-        <p>기사요약4</p>
-    </article>
-</section>
-
-<section>
-    <main>
-        <article>
-            <img src="https://img.khan.co.kr/ranking/khan/mobile/MHTopA/1_1732150351_1yn5alnZZI0SQA4Y.webp"
-                alt="경향티비 이미지">
-            <h2>속보</h2>
-        </article>
-    </main>
-</section>
-
-<section>
-    <article>
-        <h2>기사 제목7</h2>
-        <img src="https://img.khan.co.kr/ranking/khan/mobile/MHTopA/2_1732264006_sAamHQlCH2JTNEM2.webp" alt="경향티비 이미지">
-    </article>
-    <article>
-        <h2>기사 제목8</h2>
-        <img src="https://img.khan.co.kr/ranking/khan/mobile/MHTopA/3_1732254683_sR0sXwmdImezYLQa.webp" alt="경향티비 이미지">
-    </article>
-    <article>
-        <h2>기사 제목9</h2>
-        <img src="https://img.khan.co.kr/ranking/khan/mobile/MHTopA/4_1732264007_NPsNr3c0unsORy9S.webp" alt="경향티비 이미지">
-    </article>
-    <aside>신문 무료 구독</aside>
-</section>
-
-<section>
-    <h3>먼저 보는 칸업 콘텐츠</h3>
-    <article>
-        <h2>기사 제목7</h2>
-        <img src="https://img.khan.co.kr/ranking/c/140x90/khan/mobile/MHKhanUp/811_1732252190_p7uMRYV9D1yCXwQh.webp"
-            alt="경향티비 이미지">
-    </article>
-    <article>
-        <h2>기사 제목8</h2>
-        <img src="https://img.khan.co.kr/ranking/c/140x90/khan/mobile/MHKhanUp/811_1732225618_CjhmxSSG3p1Bs5Em.webp"
-            alt="경향티비 이미지">
-    </article>
-</section>
-
-<footer>
-    <p>
-    <address>서울시 중구 정동길3 경향신문사</address>
-    <span>고객센터:0202-3701-1114</span>
-    <span>등록번호:0202-3701-1114</span>
-    <span>고객센터:서울</span>
-    <span>등록일자:2012.03022:0202-3701-1114</span>
-    </p>
-    <p>
-        Copyright &copy; 경향신문. All rights reserved.
-    </p>
-</footer>
-</div>
+    <nav id="nav-footer">
+        <ul>
+            <li>회사소개</li>
+            <li>구독신청</li>
+            <li>온라인광고</li>
+            <li>사업제휴</li>
+            <li>채용</li>
+            <li>기사제보</li>
+            <li>저작권.콘텐츠 사용</li>
+            <li>회원약관</li>
+            <li>개인정보처리방침</li>
+            <li>고충처리</li>
+            <li>HELP</li>
+            <li>사이트맵</li>
+        </ul>
+    </nav>
 
 </body>
 

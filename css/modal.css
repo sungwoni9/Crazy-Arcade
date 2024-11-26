@@ -1,0 +1,239 @@
+/* CSS 변수 관리 (전역) */
+:root {
+    --primary-color: gray;
+    --secondary-color: lightgray;
+    --padding-large: 15px;
+    --padding-small: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+input:not(input[type="file"]) {
+    padding: 7px 14px;
+    border: solid 1px var(--secondary-color);
+    border-radius: var(--padding-small);
+    outline: none;
+}
+
+input[type="button"],
+input[type="submit"] {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#firstname {
+    margin-right: var(--padding-small);
+}
+
+#url {
+    border-radius: var(--padding-small) 0 0 var(--padding-small);
+}
+
+#username {
+    border-radius: 0 var(--padding-small) var(--padding-small) 0;
+    border-left: none;
+}
+
+#btn-profile {
+    height: 2.3em;
+}
+
+#input-area-file .input-group {
+    gap: var(--padding-small);
+}
+
+.btn-group {
+    display: flex;
+    gap: var(--padding-small);
+}
+
+.btn-group#first {
+    margin-bottom: 60px;
+}
+
+#bottom-group {
+    position: absolute;
+    bottom: 30px;
+    width: calc(100% - 30px);
+    padding: 0 15px;
+}
+
+.btn-group#first {
+    justify-content: flex-end;
+}
+
+.input-area {
+    display: grid;
+    grid-template-columns: 120px auto;
+    padding: var(--padding-large) 0;
+    border-bottom: solid 1px var(--secondary-color);
+}
+
+#input-container>.input-area:first-child {
+    border-top: solid 1px var(--secondary-color);
+}
+
+.input-group {
+    display: flex;
+}
+
+#input-area-name .input-group>input,
+#input-area-username .input-group>input {
+    width: 50%;
+}
+
+#email {
+    width: 100%;
+    padding-left: 27px;
+}
+
+#bottom-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btn-delete>input[type="button"] {
+    color: red;
+    border: none;
+    background-color: rgba(245, 208, 208, 0.54);
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-vector/abstract-landscape-background-traditional-japanese-themed-watercolour-style_1048-16449.jpg?t=st=1732582843~exp=1732586443~hmac=82ed3474c5a11aafd6f73bb90aaa86b229b29e04e5434ad62935e98643f8c77d&w=740");
+    background-size: cover;
+    background-position: center;
+}
+
+#modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal>form {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    border: solid 3px white;
+    border-radius: 16px;
+    background-color: white;
+    margin: calc(100vh/2 - 300px) auto;
+}
+
+#profile {
+    position: absolute;
+    top: 40px;
+    left: var(--padding-large);
+}
+
+#profile>p {
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+#profile-img {
+    width: 80px;
+    aspect-ratio: 1/1;
+    border: solid 2px white;
+    border-radius: 42px;
+    background-color: var(--secondary-color);
+}
+
+#preview-img {
+    width: 40px;
+    aspect-ratio: 1/1;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+}
+
+#background-box {
+    height: 80px;
+    border-radius: 16px 16px 0 0;
+    background-color: whitesmoke;
+}
+
+#form-content {
+    padding: var(--padding-large);
+}
+
+.icon-button {
+    position: relative;
+}
+
+.icon-button>input[type="button"] {
+    padding-left: 27px;
+}
+
+.icon-img {
+    position: absolute;
+    top: 6px;
+    left: var(--padding-small);
+    width: 1.2em;
+    height: 1.2em;
+}
+
+#btn-link>.icon-img {
+    background-image: url("https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png");
+    background-size: contain;
+    scale: 85%;
+}
+
+#btn-delete>.icon-img {
+    background-image: url("https://www.svgrepo.com/show/21045/delete-button.svg");
+    background-size: contain;
+    scale: 75%;
+
+    /* 블랙 색상을 레드로 변경 */
+    filter: invert(40%) sepia(100%) saturate(1000%) hue-rotate(-50deg);
+}
+
+#email-icon {
+    background-image: url("https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png");
+    background-size: contain;
+}
+
+#input-area-email .input-group {
+    position: relative;
+}
+
+/* CSS 미디어 쿼리를 활용한 반응형 처리하기 */
+@media screen and (max-width: 400px) {
+    #modal>form {
+        width: 90vw;
+    }
+
+    #bottom-group {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    #modal>form {
+        height: 90vh;
+        margin: var(--padding-large) auto;
+    }
+}
