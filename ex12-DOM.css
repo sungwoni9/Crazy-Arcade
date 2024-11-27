@@ -1,0 +1,15 @@
+#root {
+    background-color: lightblue;
+}
+#flex-container{
+    display: flex;
+    justify-content: space-around;
+    border: solid 2px skyblue;
+    margin: 100px 50px;
+}
+
+.item{
+    width: 50px;
+    height: 50px;
+    border: solid 1px blue;
+}

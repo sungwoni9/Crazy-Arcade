@@ -13,19 +13,17 @@
 
 // class[패턴열거]
 
-// 이메일 검증 정규식
 const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-// 테스트할 이메일 주소
 const email = 'apple@domain.com';
 
 // match() 사용
 const result = email.match(regex);
-console.log(result);  // 유효한 경우에는 배열, 유효하지 않으면 null이 반환됨
+console.log(result); 
 
 // test() 사용
 const isValid = regex.test(email);
-console.log(isValid);  // 유효한 이메일이면 true, 유효하지 않으면 false
+console.log(isValid);  
 
 // 결과 출력
 if (result) {
