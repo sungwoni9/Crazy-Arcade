@@ -75,5 +75,4 @@ console.log('array :',array);
 array.pop();
 console.log('array :',array);
 
-array.
 
