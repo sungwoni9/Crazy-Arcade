@@ -1,21 +1,13 @@
-const checkImg = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNV3bAT-Obnno05IQpAV5o7OhH7hiueQ55Hg&s",
-    "https://www.svgrepo.com/show/169312/check-mark.svg"
-];
-
 class Todo {
+    // 사용을 할 때에는 마치 속성값을 초기화 하거나 얻는 것 처럼 사용을 함
     #isDone;
     #content;
 
-    constructor(contents, isDone) {
-        this.contents = contents;
-        this.isDone = isDone;
+    constructor(content, isDone) {
+        this.#content = content;
+        this.#isDone = isDone;
     }
 
-
-    // get 또는 set 키워드로 만든 getter와 setter는 내부적으로는 메소드로 동작을 하지만
-    // 사용을 할 때에는 마치 속성값을 초기화 하거나 얻는 것 처럼 사용을 함
-    getIsDone = () => this.#isDone;
     get getIsDone() {
         return this.#isDone;
     }
@@ -23,10 +15,13 @@ class Todo {
     set setIsDone(isDone) {
         this.#isDone = isDone;
     }
+
+    getContent() {
+        return this.#content;
+    }
 }
 
 window.onload = () => {
-
     // 이벤트 위임 Event Delegation 
     // ㄴ 버블링 활용한 이벤트의 위임 처리
 
@@ -39,8 +34,8 @@ window.onload = () => {
     const list = [];
 
     const todoList = document.getElementById("todo-list");
-    const ul = document.querySelector("ul");
-    const save = todoList.getElementById("#save");
+    const ul = todoList.querySelector("ul");
+    const save = todoList.querySelector("#save");
 
     ul.addEventListener("click", e => {
         const target = e.target;
@@ -54,7 +49,8 @@ window.onload = () => {
         }
     });
 
-    todoList.addEventListener("click", e => {
+    save.addEventListener("click", e => {
+
         // 1. input element의 아이디 input-content 영역 안에있는 value를 가져와
         // 2. value가 빈 문자열이 아니면 
         // 3. 아이디 chk로부터 checked 속성 값도 따로 변수로 저장 후,
@@ -63,14 +59,36 @@ window.onload = () => {
         // 6. list 배열의 내용을 기반으로 ul 영역안에 li 엘리먼트 추가
         // ㄴ 그리기 전, ul의 innerHTML 을 모두 삭제
 
-        const todo = new Todo('오늘의 할 일', false);
-        todo.setIsDone = true;
-        console.log(todo.getIsDone);
+        const inputContent = document.getElementById("input-contents");
+        const value = inputContent.value.trim();
 
-        const target = e.target;
-
-        if (target.tagName === "BUTTON" && target.id === save) {
-            alert("저장 완료");
+        if (value === "") {
+            alert("할 일을 입력하세요!");
+            return;
         }
+
+        const checkbox = document.getElementById("chk");
+        const isDone = checkbox ? checkbox.checked : false;
+
+        const todo = new Todo(value, isDone);
+
+        list.push(todo);
+
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <div id="todo">
+                <input type="checkbox" ${todo.getIsDone ? "checked" : ""} disabled>
+                <label for="chk">
+                    <div class="check-image"></div>
+                </label>
+                <input type="text" value="${todo.getContent()}" disabled>
+            </div>
+        `;
+        ul.appendChild(li);
+
+        inputContent.value = "";
+        checkbox.checked = false;
+
+        alert("저장 완료");
     });
-};
+}
