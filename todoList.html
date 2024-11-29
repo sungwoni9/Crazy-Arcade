@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <script src="ex16-이벤트위임.js"></script>
+    <link rel="stylesheet" href="todoList.css">
+    <script src="todoList.js"></script>
     
-    <link rel="stylesheet" href="ex16-이벤트위임.css">
 
     <title>Document</title>
 </head>
@@ -14,10 +14,10 @@
     <h1>Todo list</h1>
     <div id="todo-list">
         <ul>
-            <li id="todo1">
+            <li id="todo-sample">
                 <div>
-                    <input type="checkbox" id="chk1">
-                    <label for="chk1">
+                    <input type="checkbox" id="chk0">
+                    <label for="chk0">
                         <img class="check-image">
                     </label>
                     <input type="text" value="고양이 밥주기" disabled>
@@ -29,12 +29,14 @@
                     <label for="chk">
                         <img class="check-image">
                     </label>
-                    <input id = "input-contents" type = "text" placeholder="오늘의 할 일" autofocus>
+                    <input id="input-content" type="text" placeholder="오늘의 할 일" autofocus>
+                    <button id="delete">삭제</button>
                 </div>
             </li>
         </ul>
         <button id="save">저장</button>
     </div>
+    
 
 
 </body>
