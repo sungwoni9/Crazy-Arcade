@@ -73,10 +73,6 @@ li input[type="checkbox"]:checked ~ label>.check-image {
     background-color: tomato;
 }
 
-.saved {
-    cursor: not-allowed;
-}
-
 #save:hover {
     cursor: pointer;
 }
