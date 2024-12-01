@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="crazy.css" />
-    <title>Crazy-Arcade</title>
-  </head>
-  <body>
-    <div id="game-container">
-      <div id="map-container"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="crazy.css" />
+  <title>Crazy-Arcade</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jua&display=swap');
+  </style>
+
+</head>
+
+<body>
+  <div id="game-container">
+    <div id="map-container"></div>
+    <div id="player-box">
+      <div id="timer">timer  00:00</div>
+      <div id=p1></div>
+      <div id=p2></div>
+    </div>
+    <div id="controls">
       <div id="game-info">
         <p>Bomb Count: <span id="bombCount"></span></p>
         <p>Player Position: <span id="playerPos"></span></p>
       </div>
-      <div id="controls">
-        <p>Move: [W]▲, [A]◀, [S]▼, [D]▶</p>
-        <p>폭탄설치: [E]</p>
-        <p>폭탄터트리기: [B]</p>
-      </div>
-      <div id="btn-regame">다시시작</div>
+      <p>폭탄설치: [E]</p>
+      <p>폭탄터트리기: [B]</p>
     </div>
-    <script src="crazy.js"></script>
-  </body>
+    <div id="btn-regame">다시시작</div>
+  </div>
+  <script src="crazy.js"></script>
+</body>
+
 </html>
