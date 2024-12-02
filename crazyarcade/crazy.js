@@ -1,15 +1,15 @@
 class Block {
   constructor(state, x, y) {
-    this.state = state;
+    this.state = state; 
     this.x = x;
-    this.y = y;
+    this.y = y; 
   }
 
   getImageSrc() {
     let imgSrc = "";
     switch (this.state) {
       case Crazy.PLAYER:
-        imgSrc = "images/player.jpg";
+        imgSrc = "images/player.jpg"; 
         break;
       case Crazy.WALL:
         imgSrc = "images/wall.jpeg";
@@ -21,7 +21,7 @@ class Block {
         imgSrc = "images/item.jpg";
         break;
       case Crazy.EMPTY:
-        imgSrc = "images/empty.jpg";
+        imgSrc = "images/empty.jpg"; 
         break;
       default:
         return "";
@@ -39,30 +39,31 @@ class Crazy {
 
   constructor() {
     this.SIZE = 7;
-    this.map = [];
-    this.bombs = [];
-    this.bombCnt = 3;
-    this.pX = 0;
+    this.map = []; 
+    this.bombs = []; 
+    this.bombCnt = 3; 
+    this.pX = 0; 
     this.pY = 0;
-    this.isRun = true;
-    this.isClear = false;
+    this.isRun = true; 
+    this.isClear = false; 
   }
 
   run() {
     this.setGame();
-    this.render();
+    this.render(); 
 
+    
     document.addEventListener("keydown", (e) => {
       if (this.isRun) {
         this.handleInput(e.key);
-        this.render();
+        this.render(); 
       }
     });
   }
 
   setGame() {
     this.setMap();
-    this.setPlayer();
+    this.setPlayer(); 
     this.setWall();
   }
 
@@ -70,7 +71,7 @@ class Crazy {
     this.map = [];
     for (let y = 0; y < this.SIZE; y++) {
       for (let x = 0; x < this.SIZE; x++) {
-        this.map.push(new Block(Crazy.EMPTY, x, y));
+        this.map.push(new Block(Crazy.EMPTY, x, y)); 
       }
     }
   }
@@ -82,8 +83,8 @@ class Crazy {
   }
 
   setWall() {
-    const wallCnt = Math.floor(Math.random() * 10) + 5;
-    this.setStateOnRandomPos(Crazy.WALL, wallCnt);
+    const wallCnt = Math.floor(Math.random() * 10) + 5; 
+    this.setStateOnRandomPos(Crazy.WALL, wallCnt); 
   }
 
   setStateOnRandomPos(state, count) {
@@ -92,7 +93,7 @@ class Crazy {
       const rIdx = Math.floor(Math.random() * this.map.length);
       const block = this.map[rIdx];
       if (block.state === Crazy.EMPTY) {
-        block.state = state;
+        block.state = state; 
         result = block;
         count--;
       }
@@ -102,11 +103,11 @@ class Crazy {
 
   handleInput(key) {
     if (["a", "d", "w", "s"].includes(key)) {
-      this.move(key);
+      this.move(key); 
     } else if (key === "e") {
-      this.install();
+      this.install(); 
     } else if (key === "b") {
-      this.explode();
+      this.explode(); 
     }
   }
 
@@ -115,19 +116,18 @@ class Crazy {
     let y = this.pY;
 
     if (direction === "a") x--;
-    if (direction === "d") x++;
-    if (direction === "w") y--;
+    if (direction === "d") x++; 
+    if (direction === "w") y--; 
     if (direction === "s") y++;
 
     const block = this.getBlockWithPosition(x, y);
-    if (!block || block.state === Crazy.WALL || block.state === Crazy.BOMB)
-      return;
+    if (!block || block.state === Crazy.WALL || block.state === Crazy.BOMB) return;
 
-    if (block.state === Crazy.ITEM) this.bombCnt++;
+    if (block.state === Crazy.ITEM) this.bombCnt++; 
 
     const target = this.getBlockWithPosition(this.pX, this.pY);
     if (target.state !== Crazy.BOMB) {
-      target.state = Crazy.EMPTY;
+      target.state = Crazy.EMPTY; 
     }
 
     block.state = Crazy.PLAYER;
@@ -136,19 +136,18 @@ class Crazy {
   }
 
   install() {
-    if (this.bombCnt === 0) return;
+    if (this.bombCnt === 0) return; 
 
     const block = this.getBlockWithPosition(this.pX, this.pY);
-    block.state = Crazy.BOMB;
+    block.state = Crazy.BOMB; 
     this.bombs.push(block);
-    this.bombCnt--;
+    this.bombCnt--; 
   }
 
   explode() {
     if (this.bombs.length === 0) return;
-
-    const bomb = this.bombs.shift();
-    this.blowUp(bomb);
+    const bomb = this.bombs.shift(); 
+    this.blowUp(bomb); 
   }
 
   blowUp(bomb) {
@@ -160,11 +159,11 @@ class Crazy {
     for (const [dx, dy] of [
       [1, 0],
       [-1, 0],
-      [0, 1],
+      [0, 1], 
       [0, -1],
     ]) {
       const block = this.getBlockWithPosition(x + dx, y + dy);
-      if (block) this.crushBlock(block);
+      if (block) this.crushBlock(block); 
     }
   }
 
@@ -172,19 +171,19 @@ class Crazy {
     if (block.state === Crazy.WALL) {
       block.state = Math.random() < 0.33 ? Crazy.ITEM : Crazy.EMPTY;
     } else if (block.state === Crazy.PLAYER) {
-      this.isRun = false;
+      this.isRun = false; 
     } else {
       block.state = Crazy.EMPTY;
     }
   }
 
   getBlockWithPosition(x, y) {
-    return this.map.find((block) => block.x === x && block.y === y) || null;
+    return this.map.find((block) => block.x === x && block.y === y) || null; 
   }
 
   render() {
     const mapContainer = document.getElementById("map-container");
-    mapContainer.innerHTML = "";
+    mapContainer.innerHTML = ""; 
 
     for (let y = 0; y < this.SIZE; y++) {
       const row = document.createElement("div");
@@ -211,8 +210,12 @@ class Crazy {
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const game = new Crazy();
   game.run();
+
+  const regameButton = document.getElementById("btn-regame");
+  regameButton.addEventListener("click", () => {
+    location.reload();
+  });
 });
